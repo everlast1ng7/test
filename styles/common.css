@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Long+Cang&display=swap');
+
+:root {
+    --main-text-color: #fff;
+    --second-text-color: #000;
+    --btn-color-bg: #F00;
+    --main-bg-color: #fff;
+    --second-bg-color: #004AAD;
+    --bg-footer: #000;
+    --width-content-1920: 1440px;
+    --width-content-1440: 1000px;
+    --width-content-1000: 800px;
+    --width-content-800: 400px;
+    --width-content-400: 320px;
+    --horizontal-padding: 5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.h {
+    font-family: 'Just Me Again Down Here', sans-serif;
+}
+
+.txt {
+    font-family: 'Long Cang', sans-serif;
+}
+
+.content-wrapper {
+    width: var(--width-content-1920);
+}
+
+@media (max-width: 1439px) {
+    .content-wrapper {
+        width: var(--width-content-1440);
+    }
+}
+
+@media (max-width: 999px) {
+    .content-wrapper {
+        width: var(--width-content-1000);
+    }
+}
+
+@media (max-width: 799px) {
+    .content-wrapper {
+        width: var(--width-content-800);
+    }
+}
+
+@media (max-width: 399px) {
+    .content-wrapper {
+        width: var(--width-content-400);
+    }
+}
+
+.menu {
+    padding-left: var(--horizontal-padding);
+    padding-right: var(--horizontal-padding);
+    background: var(--second-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 44px;
+}
+
+.menu .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+}
+
+.menu-logo p {
+    font-size: 83px;
+    color: var(--main-text-color);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-size: 40px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.menu-nav .btn {
+    background: var(--btn-color-bg);
+    outline: none;
+    border: none;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 16px;
+    height: 77px;
+    color: var(--main-text-color);
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: -20px;
+}
+
+.manu-nav-a-mobile {
+    display: none;
+}
+
+@media (max-width: 1439px) {
+    .menu-logo p {
+        font-size: 60px;
+    }
+
+    .menu-nav {
+        gap: 20px;
+    }
+
+    .menu-nav a {
+        font-size: 36px;
+    }
+
+    .menu-nav .btn {
+        margin-left: 0;
+    }
+
+    .menu .content-wrapper {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 999px) {
+    .menu-logo p {
+        font-size: 36px;
+    }
+
+    .menu-nav a {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 799px) {
+    .menu-logo p {
+        font-size: 83px;
+    }
+
+    .menu-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-nav a {
+        font-size: 40px;
+    }
+
+    .menu .content-wrapper {
+        flex-direction: column;
+    }
+
+    .manu-nav-a-mobile {
+        display: block;
+    }
+
+    .manu-nav-a-desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 399px) {
+    .menu-logo p {
+        font-size: 70px;
+    }
+
+    .menu-nav a {
+        font-size: 32px;
+    }
+}
+
+.border-b {
+    border-bottom: 2px solid var(--second-text-color);
+    cursor: pointer;
+}
